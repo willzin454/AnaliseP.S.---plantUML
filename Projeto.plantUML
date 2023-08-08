@@ -5,22 +5,22 @@
 
     : Usuario(cliente): as C1
 
-    (Usuário pesquisar por uma CD Key) as CU001
-    (Sistema exibe uma lista de CD Keys) as CU002
-    (Usuário pode selecionar uma CD Key para visualizar) as CU003
-    (Sistema exibe informações detalhadas sobre o CD Key) as CU004
-    (Usuário pode adicionar uma ou mais CD Keys no carrinho) as CU005
-    (Sistema atualiza o carrinho com os produtos selecionados) as CU006
-    (Usuario visualiza o conteudo do carrinho) as CU007
-    (Usuário pode remover itens do carrinho ou ajustar a quantidade) as CU008
-    (Sistema atualiza o carrinho conforme as ações do usuário) as CU009
-    (Usuário prossegue para efetuar a compra dos itens no carrinho) as CU010
-    (Sistema solicita as informações de pagamento e envio) as CU011
-    (Sistema processa o pagamento e gera as CD Keys para o usuário) as CU012
-    (Usuário pode acessar seu histórico de compras anteriores) as CU013
-    (Sistema exibe uma lista de todas as compras do usuário) as CU014
-    (Usuário pode acessar e editar as informações de sua conta) as CU015
-    (Usuário pode modificar suas preferências de comunicação) as CU016
+    (Pesquisar por uma CD Key) as CU001
+    (Exibir uma lista de CD Keys) as CU002
+    (Selecionar uma CD Key para visualizar) as CU003
+    (Exibir informações detalhadas sobre o CD Key) as CU004
+    (Adicionar uma ou mais CD Keys no carrinho) as CU005
+    (Atualizar o carrinho com os produtos selecionados) as CU006
+    (Visualizar o conteudo do carrinho) as CU007
+    (Remover itens do carrinho ou ajustar a quantidade) as CU008
+    (Atualizar o carrinho conforme as ações do usuário) as CU009
+    (Proseguir para efetuar a compra dos itens no carrinho) as CU010
+    (Solicitar as informações de pagamento e envio) as CU011
+    (Processar o pagamento e gerar as CD Keys para o usuário) as CU012
+    (Acessar seu histórico de compras anteriores) as CU013
+    (Exibir uma lista de todas as compras do usuário) as CU014
+    (Acessar e editar as informações de sua conta) as CU015
+    (Modificar suas preferências de comunicação) as CU016
 
     C1 -- CU001
     C1 -- CU003

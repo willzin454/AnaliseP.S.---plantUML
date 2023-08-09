@@ -32,17 +32,17 @@
     C1 -- CU015
     C1 -- CU016
     
-    CU002 <.. CU001
-    CU002 ..> CU003
-    CU003 <.. CU004
-    CU003 ..> CU005
-    CU005 ..> CU006
-    CU007 <.. CU005
-    CU007 ..> CU008
-    CU009 <.. CU008
-    CU010 <.. CU009
-    CU011 <.. CU010
-    CU012 <.. CU011
-    CU014 <.. CU013
+    CU002 ..> CU001 : <<extend>>
+    CU002 <.. CU003 : <<extend>>
+    CU003 <.. CU004 : <<extend>>
+    CU003 ..> CU005 : <<include>>
+    CU005 <.. CU006 : <<extend>>
+    CU007 <.. CU005 : <<include>>
+    CU007 ..> CU008 : <<include>>
+    CU009 <.. CU008 : <<include>>
+    CU010 <.. CU009 : <<include>>
+    CU011 <.. CU010 : <<include>>
+    CU012 <.. CU011 : <<include>>
+    CU014 <.. CU013 : <<include>>
 
 @enduml

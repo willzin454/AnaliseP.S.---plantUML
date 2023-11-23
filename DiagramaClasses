@@ -1,0 +1,165 @@
+@startuml
+
+  class "Cliente" as cl{
+    + idCliente: INT
+    + Nome: String
+    + Email: String
+    + Telefone: String
+    + CPF: String
+    + historicoCompras: Matriz
+    + adicionarCompra()
+    + getNome()
+    + getEmail()
+    + getEndereco()
+    + getTelefone()
+    + getHistoricoCompras()
+    
+  }
+
+  class "Produto" as prod{
+    + idProduto: INT
+    + Nome: String
+    + Descrição: String
+    + CodigoCDKey: String
+    + Preço: Float
+    + Plataforma: String
+    + Disponibilidade: Bool
+    + DataLancamento: String
+    + isDisponivel()
+    + getNome()
+    + getDescricao()
+    + getPreco()
+    + getCDKey()
+    + getPlataforma()
+    + getDataLancamento()
+    
+  }
+
+  class "Categoria" as cat{
+    + idCategoria: INT
+    + Nome: String
+    + Descricao: String
+    + Produtos: Matriz
+    + adicionarProduto()
+    + getNome()
+    + getProdutos()
+
+  }
+
+  class "Pedido" as ped{
+    + idPedido: INT
+    + Cliente: Cliente
+    + Produtos: Matriz
+    + dataPedido: String
+    + Status: String
+    + Total: Float
+    + adicionarProduto()
+    + removerProduto()
+    + calcularTotal()
+    + atualizarStatus()
+    + getCliente()
+    + getProdutos()
+    + getDataPedido()
+    + getStatus()
+    + getTotal()
+    
+  }
+
+  class "Fornecedor" as forn{
+    + idFornecedor: INT
+    + Nome: String
+    + Email: String
+    + Fone: String
+    + ProdutosFornecidos: Matriz
+    + adicionarProduto()
+    + getNome()
+    + getEmail()
+    + getTelefone()
+    + getTelefone()
+
+  }
+  
+  class "CarrinhoDeCompra" as car{
+    + ListaDeProduto: Matriz
+    + QuantidadeDeProduto: INT
+    + adicionarProduto()
+    + removerProduto()
+    + calcularTotal()
+  
+  }
+  
+  class "Avaliação" as ava{
+    + IdAvaliacao: INT
+    + idProduto: INT 
+    + idCliente: INT
+    + Classifiacao: INT
+    + Comentario: String
+    + adicionarAvaliacao()
+    + verAvaliacoes()
+  
+  }
+  
+  class "Pagamento" as pag{
+    + IdPagamaneto: INT
+    + idPedido: INT
+    + Valor: Float
+    + MetodoPagamento: INT
+    + Data&Hora: String
+    + processarPagamento()
+    + gerarRecibo()
+  
+  }
+  
+  class "GerenciamentoConta" as admAc{
+    + criarContaCliente()
+    + autenticarUsuario()
+    + recuperarSenha()
+  
+  }
+  
+  class "Segurança" as seg{
+    + validarToken()
+    + verificarPermissoes()
+    
+  }
+  
+  class "Suporte" as sup{
+    + validarToken()
+    + verificarPermissoes()
+  
+  }
+  
+  class "HistoricoPedidos" as histped{
+    + acessarHistoricoPedidosCliente()
+    + filtrarPedidosPorStatus()
+  
+  }
+  
+  class "Notificação" as not{
+    + IdNotificacao: INT
+    + idCliente: INT
+    + Mensagem: String
+    + Data&Hora: String
+    + enviarNotificacaoEmail()
+    + enviarNotificacaoSMS()
+  
+  }
+  
+  
+prod <-- ped
+cl <-- ped
+prod --> forn
+prod <-- cat
+ped ..> histped
+sup <.. cl
+ava *.. cl
+ava *.. prod
+cl *-- car
+not *.. cl
+admAc <.. cl
+pag <.. ped
+pag *.. cl
+pag ..> seg
+seg <.. admAc
+  
+@enduml
